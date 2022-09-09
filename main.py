@@ -1,3 +1,6 @@
 import emoji
 
-print(emoji.emojize("hello emoji :thumbs_up: :star:"))
+def greeting(name):
+    print(emoji.emojize("Hello " + name + " :thumbs_up: :star:"))
+
+greeting("John")
