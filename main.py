@@ -1,5 +1,5 @@
-import greet
+from greet import greet
 
-greet.greet("John")
-greet.greet("Mark")
-greet.greet("Alex")
+greet("John")
+greet("Mark")
+greet("Alex")
