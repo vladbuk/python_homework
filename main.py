@@ -1,6 +1,5 @@
-import emoji
+import greet
 
-def greet(name):
-    print(emoji.emojize("Hello " + name + " :thumbs_up: :star:"))
-
-greeting("John")
+greet.greet("John")
+greet.greet("Mark")
+greet.greet("Alex")
