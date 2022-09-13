@@ -34,3 +34,8 @@ print(lst)
 lst2 = [120, 8, 1, -5, 9, 3, 22, 132]
 lst2.sort()
 print(lst2)
+
+lst3 = lst2.copy()
+print(lst3)
+lst3[0] = 0
+print(lst2 + lst3)
