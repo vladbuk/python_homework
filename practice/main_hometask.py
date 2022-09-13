@@ -12,7 +12,7 @@ def main():
     # and all required data asked
     a, b, c = ask_value("Enter 3 values of a, b, c backspace devided\n")
     print("a, b, c : ", a, b, c)
-    print("discriminant: ", discriminant(a, b, c))
+    print("Results: ", solv_square(a, b, c))
 
 def ask_value(message):
     # ask_value(message) this function should ask user for input, 
@@ -34,11 +34,22 @@ def discriminant(a, b, c):
 
 def roots(d, a, b, c):
     # roots(d,a,b,c) will show on the screen all acceptable roots
-    pass
+    if d > 0:
+        root1 = (-b + (d ** 0.5) ) / (2 * a)
+        root2 = (-b - (d ** 0.5) ) / (2 * a)
+        print("root1 =  {}, root2 = {}").format(root1, root2)
+    elif d == 0:
+        root1 = root2 = -b / (2 * a)
+        print("root1 == root2 = {}").format(root1)
+    else:
+        real = -b / (2 * a)
+        imaginary = -d ** 0.5 / (2 * a)
+        print(real, imaginary)
+        #print("Roots are imaginary - {} plus-minus {} i").format(real, imaginary)
 
 def solv_square(a, b, c):
     # solv_square(a,b,c) this function should 
     # contain inside discriminant and roots functions.
-    pass
+    return roots(discriminant(a, b, c), a, b, c)
 
 main()
