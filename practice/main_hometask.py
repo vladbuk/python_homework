@@ -32,12 +32,18 @@ def discriminant(a, b, c):
     d = b**2 - 4 * a * c
     return d
 
-def roots(d, a, b, c):
+def roots():
+#def roots(d, a, b, c):
     # roots(d,a,b,c) will show on the screen all acceptable roots
+    a, b, c = ask_value("Enter 3 values of a, b, c backspace devided\n")
+    d = discriminant(a, b, c)
+    print(d)
     if d > 0:
         root1 = (-b + (d ** 0.5) ) / (2 * a)
+        print(root1)
         root2 = (-b - (d ** 0.5) ) / (2 * a)
-        print("root1 =  {}, root2 = {}").format(root1, root2)
+        print(root2)
+        print("root1 = {}, root2 = {}".format(root1, root2))
     elif d == 0:
         root1 = root2 = -b / (2 * a)
         print("root1 == root2 = {}").format(root1)
@@ -52,4 +58,5 @@ def solv_square(a, b, c):
     # contain inside discriminant and roots functions.
     return roots(discriminant(a, b, c), a, b, c)
 
-main()
+#main()
+roots()
