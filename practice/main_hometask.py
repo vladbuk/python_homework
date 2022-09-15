@@ -35,7 +35,8 @@ def discriminant(a, b, c):
 def roots():
 #def roots(d, a, b, c):
     # roots(d,a,b,c) will show on the screen all acceptable roots
-    a, b, c = ask_value("Enter 3 values of a, b, c backspace devided\n")
+    #a, b, c = ask_value("Enter 3 values of a, b, c backspace devided\n")
+    a, b, c = (1, 6, 9)
     d = discriminant(a, b, c)
     print(d)
     if d > 0:
@@ -46,12 +47,12 @@ def roots():
         print("root1 = {}, root2 = {}".format(root1, root2))
     elif d == 0:
         root1 = root2 = -b / (2 * a)
-        print("root1 == root2 = {}").format(root1)
+        print("root1 == root2 = {}".format(root1))
     else:
         real = -b / (2 * a)
         imaginary = -d ** 0.5 / (2 * a)
-        print(real, imaginary)
-        #print("Roots are imaginary - {} plus-minus {} i").format(real, imaginary)
+        #print(real, imaginary)
+        print("Roots are imaginary - {} plus-minus {} i".format(real, imaginary))
 
 def solv_square(a, b, c):
     # solv_square(a,b,c) this function should 
